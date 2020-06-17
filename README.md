@@ -9,7 +9,7 @@
 * CSS ACTIVE PARA O MOBILE
 * CSS CURSOR POINTER
 
-![Tic Tac Toc](https://github.com/r-santtos/Today-I-Learned/blob/master/Tic-Tac-Toc-PWA-master/tic%20tac%20toc.gif?raw=true?raw=true "Tic Tac Toc")
+![Tic Tac Toc](https://github.com/r-santtos/Tic-Tac-Toc-PWA/blob/master/tic%20tac%20toc.gif?raw=true?raw=true "Tic Tac Toc")
 
 ### Link para testes... Atenção! esse link não é permanente
 #### [Tic Tac Toe PWA](https://analistacode.com/app/tictactoe/)

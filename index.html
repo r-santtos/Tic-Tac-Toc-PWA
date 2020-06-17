@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content='Programamos um GAME com JavaScript Puro em 28 minutos // Mão no Código #10' />
+    <meta name="theme-color" content="#34495e" />
+    <link rel="stylesheet" type="text/css" href="/controller/css/style.css" />
+    <script src="/controller/javascript/tictactoe.js"></script>
+    <title>Tic Tac Toe</title>
+
+    <!-- PWA PARA APPLE -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="TicTacToe" />
+    <link rel="apple-touch-icon" href="***" />
+    <meta name="theme-color" content="#34495e" />
+    <link rel="manifest" href="/controller/javascript/manifest_tic_tac_toe.json" />
+
+    <!-- SERVICE WORKER -->
+    <script>
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw_tic_tac_toe.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+        }
+    </script>
+</head>
+<body>
+    
+    <div class='game'></div>
+    <button class="btn" onclick="tic_tac_toe.restart()" title="Restart this game">Restart</button>
+
+    <script>
+        tic_tac_toe.init( document.querySelector('.game') );
+        tic_tac_toe.start();
+    </script>
+    
+</body>
+</html>
